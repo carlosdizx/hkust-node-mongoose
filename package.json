@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/carlosdizx/hkust-node-mongoose/issues"
   },
-  "homepage": "https://github.com/carlosdizx/hkust-node-mongoose#readme"
+  "homepage": "https://github.com/carlosdizx/hkust-node-mongoose#readme",
+  "devDependencies": {
+    "@types/node": "^20.5.3",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
 }
