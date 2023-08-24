@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon"
   },
-  "author": "Ernesto Diaz\\",
+  "author": "Ernesto Diaz",
   "license": "ISC",
   "description": "Node app with mongodb and mongoose",
   "repository": {
