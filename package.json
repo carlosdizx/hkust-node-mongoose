@@ -7,5 +7,13 @@
   },
   "author": "Ernesto Diaz\\",
   "license": "ISC",
-  "description": ""
+  "description": "Node app with mongodb and mongoose",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosdizx/hkust-node-mongoose.git"
+  },
+  "bugs": {
+    "url": "https://github.com/carlosdizx/hkust-node-mongoose/issues"
+  },
+  "homepage": "https://github.com/carlosdizx/hkust-node-mongoose#readme"
 }
