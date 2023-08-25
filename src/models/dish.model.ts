@@ -20,6 +20,6 @@ const schema = new Schema(
   { timestamps: true }
 );
 
-const dishModel = model<IDish>("Dish", schema);
+const DishModel = model<IDish>("Dish", schema);
 
-export default dishModel;
+export default DishModel;
