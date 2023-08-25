@@ -1,28 +1,28 @@
 import connectMongodb from "./utils/mongodb.util";
 import DishModel from "./models/dish.model";
 const playWithMongodb = async () => {
-  const newDish = new DishModel({
+  console.log("Trying play with Mongodb");
+
+  await DishModel.create({
     name: "Pizza Hawaiian",
     description: "Cheese, pineapple-topped and delicious sourdough mother",
   });
-  console.log("Trying play with Mongodb");
-  const dishSaved = await newDish.save();
-  console.log(dishSaved);
-  newDish.name = "Pizza Italian";
-  await newDish.save();
+  console.log("created", await DishModel.findOne({}));
 
-  DishModel.updateOne(
-    { _id: dishSaved._id },
+  await DishModel.updateOne(
+    {},
     {
       $set: {
+        name: "Italian",
         description:
           "Cheese, peperoni, tomate paste and delicious sourdough mother",
       },
     }
-  );
-  const dishes = await DishModel.find({}).exec();
-  console.log(dishes);
-  await newDish.deleteOne({});
+  ).exec();
+
+  console.log("updated", await DishModel.findOne({}));
+
+  await DishModel.deleteOne({}).exec();
 };
 
 (async () => {
