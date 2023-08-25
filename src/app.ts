@@ -8,6 +8,18 @@ const playWithMongodb = async () => {
   console.log("Trying play with Mongodb");
   const dishSaved = await newDish.save();
   console.log(dishSaved);
+  newDish.name = "Pizza Italian";
+  await newDish.save();
+
+  DishModel.updateOne(
+    { _id: dishSaved._id },
+    {
+      $set: {
+        description:
+          "Cheese, peperoni, tomate paste and delicious sourdough mother",
+      },
+    }
+  );
   const dishes = await DishModel.find({}).exec();
   console.log(dishes);
   await newDish.deleteOne({});
